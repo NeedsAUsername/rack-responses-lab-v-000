@@ -3,7 +3,6 @@ class Application
         resp = Rack::Response.new
         datetime = Time.now
         time = datetime.to_s.split(" ")[1]
-        resp.write "#{time}"
         if time[0..1].to_i > 12
             resp.write "Good Afternoon!"
         else
